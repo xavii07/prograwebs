@@ -46,3 +46,20 @@
   height: 127px;
   transform: rotateY(180deg);
 }
+
+.fondo_prograwebs {
+  animation: moveUpDown 2s ease-in-out infinite;
+  animation-delay: 1.6s;
+}
+
+@keyframes moveUpDown {
+  0% {
+    transform: translate(0) translateY(0);
+    filter: drop-shadow(0 3px 6px rgba(0, 0, 0, 0.35));
+  }
+
+  50% {
+    transform: translate(-2px) translateY(-7px);
+    filter: drop-shadow(0 10px 8px rgba(0, 0, 0, 0.35));
+  }
+}
