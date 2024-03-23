@@ -2,83 +2,101 @@ import { useState } from "react";
 import { motion } from "framer-motion";
 
 import { InvitationModal } from "./InvitationModal";
-import dashboard from "../assets/images/dashboard.jpg";
 
 export const Hero = () => {
   const [isModalOpen, setIsModalOpen] = useState(false);
 
   return (
     <section
-      className="w-screen  flex justify-center items-center bg-customDarkBg1 mb-[28vw] md:mb-[18vw] lg:mb-[10vw] xl:mb-[13vw] 2xl:mb-60 hero-bg-gradient pb-24 sm:pb-32 md:pb-44 lg:pb-0"
+      className="w-screen flex justify-center items-center bg-customDarkBg1 mb-[28vw] md:mb-[18vw] lg:mb-[10vw] xl:mb-[13vw] 2xl:mb-60 hero-bg-gradient pb-24 sm:pb-32 md:pb-44 lg:pb-0"
       id="home"
     >
-      <div className="w-full md:w-[800px] xl:w-[900px] flex flex-col justify-center items-center pt-16 md:pt-16 lg:pt-20 text-center">
+      <div className="grid grid-cols-1 lg:grid-cols-2 lg:gap-2 place-items-center lg:place-items-stretch">
+        <div className="md:w-[800px] flex flex-col justify-center items-center pt-16 md:pt-16 lg:pt-20 text-center">
+          <motion.div
+            initial={{ opacity: 0, y: 10 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.5 }}
+          >
+            <div className="text-customGrayText text-sm sm:text-base  mb-6 sm:mt-32 mt-16">
+              Código hecho a medida para tu éxito en la Web
+            </div>
+          </motion.div>
+          <motion.div
+            initial={{ opacity: 0, y: 10 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.5, delay: 0.05 }}
+          >
+            <div className="text-5xl sm:text-6xl lg:text-7xl xl:text-7xl font-bold tracking-wide  text-white  px-8 sm:px-8 md:px-20 lg:px-4">
+              <span className="inline md:hidden">
+                PROGRA<span className="text-customSecondary">WEBS</span>
+              </span>
+              <span className="hidden md:inline">
+                PROGRA<span className="text-customSecondary">WEBS</span>
+              </span>
+            </div>
+            <div className="mt-2 sm:mt-2 text-4xl sm:text-6xl lg:text-7xl xl:text-7xl font-bold tracking-wide  text-white  px-8 sm:px-20 md:px-24 lg:px-24"></div>
+          </motion.div>
+          <motion.div
+            initial={{ opacity: 0, y: 10 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.5, delay: 0.1 }}
+          >
+            <div className="text-customGrayText text-sm lg:text-base xl:text-lg sm:text-base mt-2 px-12 sm:px-48 ">
+              Impulsamos el éxito en línea de nuestros clientes. Únete a
+              nosotros para crear el futuro en cada clic
+            </div>
+            <br />
+            <br />
+          </motion.div>
+          <motion.div
+            initial={{ opacity: 0, y: 10 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.5, delay: 0.15 }}
+          >
+            <div className="flex flex-col gap-2 sm:flex-row mt-14 mb-24 sm:mb-40 justify-center">
+              <div
+                className="custom-button-colored w-64 sm:w-52 h-12 mr-0 sm:mr-4 lg:mr-6 mb-2 sm:mb-0"
+                onClick={() => setIsModalOpen(true)}
+              >
+                Comprar
+              </div>
+              <div
+                className="w-64 sm:w-52 h-12 rounded-xl font-bold text-white border border-solid  flex justify-center items-center cursor-pointer bg-customDarkBg2 hover:bg-customDarkBg3 border-customPrimary transition"
+                onClick={() => setIsModalOpen(true)}
+              >
+                Ver Demo
+              </div>
+            </div>
+          </motion.div>
+        </div>
         <motion.div
           initial={{ opacity: 0, y: 10 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.5 }}
+          className="hidden lg:flex justify-center items-center "
         >
-          <div className="text-customSecondary text-sm sm:text-base  mb-6 sm:mt-32 mt-16  font-bold">
-            BIENVENIDOS/AS
-          </div>
-        </motion.div>
-        <motion.div
-          initial={{ opacity: 0, y: 10 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.5, delay: 0.05 }}
-        >
-          <div className="text-5xl sm:text-6xl lg:text-7xl xl:text-7xl font-bold tracking-wide  text-white  px-8 sm:px-8 md:px-20 lg:px-4">
-            <span className="inline md:hidden">PROGRAWEBS</span>
-            <span className="hidden md:inline"> PROGRAWEBS </span>
-          </div>
-          <div className="mt-2 sm:mt-2 text-4xl sm:text-6xl lg:text-7xl xl:text-7xl font-bold tracking-wide  text-white  px-8 sm:px-20 md:px-24 lg:px-24"></div>
-        </motion.div>
-        <motion.div
-          initial={{ opacity: 0, y: 10 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.5, delay: 0.1 }}
-        >
-          <div className="text-customGrayText text-sm lg:text-base xl:text-lg sm:text-base mt-10 px-12 sm:px-48 ">
-            Código Hecho a Medida para Tu Éxito en la Web
-          </div>
-          <br />
-          <br />
-        </motion.div>
-        <motion.div
-          initial={{ opacity: 0, y: 10 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.5, delay: 0.15 }}
-        >
-          <div className="flex flex-col gap-2 sm:flex-row mt-14 mb-24 sm:mb-40 justify-center">
-            <div
-              className="custom-button-colored w-64 sm:w-52 h-12 mr-0 sm:mr-4 lg:mr-6 mb-2 sm:mb-0"
-              onClick={() => setIsModalOpen(true)}
-            >
-              Comprar
-            </div>
-            <div
-              className="w-64 sm:w-52 h-12 rounded-xl font-bold text-white border border-solid  flex justify-center items-center cursor-pointer bg-customDarkBg2 hover:bg-customDarkBg3 border-customPrimary transition"
-              onClick={() => setIsModalOpen(true)}
-            >
-              Ver Demo
-            </div>
-          </div>
+          <img
+            src="src/assets/images/fondo.webp"
+            alt="Fondo"
+            className="w-8/12 fondo_prograwebs"
+          />
         </motion.div>
         <motion.div
           initial={{ opacity: 0, y: 10, zIndex: 20 }}
           animate={{ opacity: 1, y: 0, zIndex: 20 }}
           transition={{ duration: 0.5, delay: 0.15 }}
         >
-          <div className="relative w-screen flex justify-center ">
+          <div className="hidden absolute w-screen lg:flex justify-center">
             <img
               src="src/assets/images/image-18.webp"
               alt="123"
               style={{ height: "560px" }}
-              className="w-4/5 2xl:w-[1200px] mx-auto absolute z-10 rounded-xl custom-border-gray hero-dashboard-border-gradient lg:top-6 xl:top-0 opacity-50"
+              className="w-4/5 2xl:w-[1200px] mx-auto absolute rounded-xl custom-border-gray hero-dashboard-border-gradient opacity-50 scale-95 hover:opacity-100 hover:scale-100 hover:transition-all"
             />
           </div>
         </motion.div>
-        <div className="relative w-screen flex justify-center ">
+        <div className="relative w-screen flex justify-center col-span-2">
           <div className="custom-shape-divider-bottom-1665343298 mt-4 sm:mt-16 md:mt-52 hidden lg:block">
             <svg
               data-name="Layer 1"
@@ -95,6 +113,7 @@ export const Hero = () => {
           </div>
         </div>
       </div>
+
       {isModalOpen && (
         <InvitationModal isOpen={isModalOpen} setIsOpen={setIsModalOpen} />
       )}

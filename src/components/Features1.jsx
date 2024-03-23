@@ -55,14 +55,14 @@ export const Features1 = () => {
             <div className="mb-8 lg:mb-0 w-full sm:w-1/2 px-2 lg:px-0">
               <div className="mb-4 py-3 pl-3 pr-2 rounded">
                 <img
-                  src="src/assets/images/astra.png"
+                  src="src/assets/images/astra.webp"
                   alt="f1"
                   className="rounded-xl  custom-border-gray mx-auto sm:mx-unset"
                 />
               </div>
-              <div className="py-3 pl-3 pr-2 rounded ">
+              <div className="py-3 pl-3 pr-2 rounded">
                 <img
-                  src="src/assets/images/hestia.png"
+                  src="src/assets/images/hestia.webp"
                   alt="f2"
                   className="rounded-xl  custom-border-gray mx-auto sm:mx-unset"
                 />
