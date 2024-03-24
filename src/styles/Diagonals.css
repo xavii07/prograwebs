@@ -13,7 +13,7 @@
 }
 .hero-title-gradient {
   background: -webkit-linear-gradient(white, #b4add1);
-  -webkit-background-clip: text;
+  -webkit-background-clips: text;
   -webkit-text-fill-color: transparent;
 }
 
@@ -62,4 +62,16 @@
     transform: translate(-2px) translateY(-7px);
     filter: drop-shadow(0 10px 8px rgba(0, 0, 0, 0.35));
   }
+}
+/* MODAL */
+.nombre {
+  padding: auto;
+  margin-bottom: 10px;
+  border-radius: 10;
+  text-align: left;
+}
+
+.letters {
+  color: white;
+  margin-bottom: 8px;
 }
