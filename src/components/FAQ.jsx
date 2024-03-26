@@ -39,10 +39,10 @@ export const FAQ = () => (
             style={{ color: "#33CB32" }}
             className="mb-7 custom-block-subtitle text-center text-[#33CB32]"
           >
-            Have any questions?
+            ¿Tienes alguna duda?
           </p>
           <h2 className="mb-16 custom-block-big-title text-center">
-            Frequently Asked Questions
+            Preguntas <span className="text-customSecondary">Frecuentes</span>
           </h2>
           <div className="mb-11 flex flex-wrap -m-1">
             {FAQData.map((item, index) => (

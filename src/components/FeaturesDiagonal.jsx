@@ -34,7 +34,8 @@ export const FeaturesDiagonal = () => {
               Potencie su éxito digital
             </span>
             <h2 className="mt-10 mb-8 text-4xl lg:text-5xl custom-block-big-title">
-              Desbloquea tu Potencial en Línea con Nuestras Páginas Web
+              Desbloquea tu potencial en línea con{" "}
+              <span className="text-customSecondary">nuestras páginas Web</span>
             </h2>
             <p className="mb-16 text-customGrayText leading-loose text-justify">
               En la era digital actual, tener una presencia en línea sólida es
@@ -53,7 +54,7 @@ export const FeaturesDiagonal = () => {
           <div className="w-4/5 lg:w-1/2 lg:pl-16 flex justify-center mx-auto pt-16 lg:pt-0">
             <img
               src="src/assets/images/featuresdiagonal.jpg"
-              alt="f1"
+              alt="Linea de tiempo"
               className="rounded-xl  custom-border-gray"
             />
           </div>

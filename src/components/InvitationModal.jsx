@@ -100,7 +100,7 @@ export const InvitationModal = ({ setIsOpen }) => {
                   <div className="text-white mr-2 text-8xl">
                     <img
                       src="src/assets/images/logo.png"
-                      alt=""
+                      alt="Logo Prograwebs"
                       style={{ height: "30px" }}
                     />
                   </div>

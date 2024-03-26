@@ -35,7 +35,7 @@ export const Footer = () => {
                 <div className="text-white mr-2 text-6xl">
                   <img
                     src="src/assets/images/logo.png"
-                    alt=""
+                    alt="Logo Prograwebs"
                     style={{ height: "40px;" }}
                   />
                 </div>
@@ -130,9 +130,6 @@ export const Footer = () => {
               </div>
             </div>
           </div>
-          <p className="lg:text-center text-sm text-gray-400 border-t border-[rgb(255,255,255,0.2)] pt-12 mt-16 hidden lg:block">
-            Todos los derechos reservados &copy; 2024 Prograwebs.
-          </p>
         </div>
       </div>
     </footer>

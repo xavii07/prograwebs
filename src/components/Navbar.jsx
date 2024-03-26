@@ -29,7 +29,7 @@ export const Navbar = () => {
               <div className="text-white mr-2 text-6xl">
                 <img
                   src="src/assets/images/logo.png"
-                  alt=""
+                  alt="Logo Prograwebs"
                   style={{ width: "60px", height: "40px" }}
                 />
               </div>

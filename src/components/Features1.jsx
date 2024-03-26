@@ -21,7 +21,8 @@ export const Features1 = () => {
                 Paginas Estaticas y Dinamicas
               </span>
               <h2 className="mt-6 mb-8 text-4xl lg:text-5xl custom-block-big-title">
-                ¡Transforma tu Presencia en la Web!
+                ¡Transforma tu presencia{" "}
+                <span className="text-customSecondary">en la Web!</span>
               </h2>
               <p className="mb-10 text-customGrayText leading-loose">
                 ¿Cansado de páginas estáticas aburridas?
@@ -56,14 +57,14 @@ export const Features1 = () => {
               <div className="mb-4 py-3 pl-3 pr-2 rounded">
                 <img
                   src="src/assets/images/astra.webp"
-                  alt="f1"
+                  alt="Proyecto Astra"
                   className="rounded-xl  custom-border-gray mx-auto sm:mx-unset"
                 />
               </div>
               <div className="py-3 pl-3 pr-2 rounded">
                 <img
                   src="src/assets/images/hestia.webp"
-                  alt="f2"
+                  alt="Proyecto Hestia"
                   className="rounded-xl  custom-border-gray mx-auto sm:mx-unset"
                 />
               </div>
@@ -72,14 +73,14 @@ export const Features1 = () => {
               <div className="mb-4 py-3 pl-3 pr-2 rounded-lg ">
                 <img
                   src="src/assets/images/image-33.webp"
-                  alt="f3"
+                  alt="Proyecto Sala"
                   className="rounded-xl  custom-border-gray"
                 />
               </div>
               <div className="py-3 pl-3 pr-2 rounded-lg ">
                 <img
                   src="src/assets/images/image-20.webp"
-                  alt="f4"
+                  alt="Proyecto Experiencia"
                   className="rounded-xl  custom-border-gray"
                 />
               </div>

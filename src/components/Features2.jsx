@@ -16,14 +16,14 @@ export const Features2 = () => (
             <div className="mb-4 py-3 md:pl-3 md:pr-20 lg:pr-12 rounded">
               <img
                 src="src/assets/images/echeverria.png"
-                alt="f1"
+                alt="Proyecto Echeverria"
                 className="rounded-xl  custom-border-gray"
               />
             </div>
             <div className="py-3 md:pl-20 lg:pl-12 md:pr-2 rounded ">
               <img
                 src="src/assets/images/sanJuan.png"
-                alt="f2"
+                alt="Proyecto San Juan"
                 className="rounded-xl  custom-border-gray"
               />
             </div>
@@ -34,7 +34,8 @@ export const Features2 = () => (
           <div className="mx-auto lg:mx-auto w-11/12 sm:w-4/5 md:w-3/4 lg:w-unset">
             <span className="custom-block-subtitle">Aplicativos Web</span>
             <h2 className="mt-6 mb-8 text-4xl lg:text-5xl custom-block-big-title">
-              ¡Mejora tu Gestión Empresarial!
+              ¡Mejora tu Gestión{" "}
+              <span className="text-customSecondary">Empresarial!</span>
             </h2>
             <p className="mb-12 text-customGrayText leading-loose">
               Supervisa y rastrea problemas de datos de manera intuitiva y

@@ -56,7 +56,9 @@ export const Hero = () => {
           >
             <div className="flex flex-col gap-2 sm:flex-row mt-14 mb-24 sm:mb-40 justify-center">
               <a
-                href=""
+                target="_blank"
+                rel="noreferrer"
+                href="https://api.whatsapp.com/send?phone=593995018185&text=Buenas%20tardes%20me%20gustaria%20saber%20mas%20sobre%20sus%20servicios"
                 className="custom-button-colored w-64 sm:w-52 h-12 mr-0 sm:mr-4 lg:mr-6 mb-2 sm:mb-0"
               >
                 Contacto
@@ -78,7 +80,7 @@ export const Hero = () => {
         >
           <img
             src="src/assets/images/fondo.webp"
-            alt="Fondo"
+            alt="Fondo Prograwebs"
             className="w-8/12 fondo_prograwebs"
           />
         </motion.div>
@@ -90,7 +92,7 @@ export const Hero = () => {
           <div className="hidden absolute w-screen lg:flex justify-center">
             <img
               src="src/assets/images/image-18.webp"
-              alt="123"
+              alt="Interior Diseño"
               style={{ height: "560px" }}
               className="w-4/5 2xl:w-[1200px] mx-auto absolute rounded-xl custom-border-gray hero-dashboard-border-gradient opacity-50 scale-95 hover:opacity-100 hover:scale-100 hover:transition-all"
             />
