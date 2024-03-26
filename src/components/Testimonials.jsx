@@ -34,7 +34,7 @@ export const Testimonials = () => (
           Acerca de Nosotros
         </div>
         <div className="custom-block-big-title text-center mb-16 px-8 sm:px-24 md:px-48">
-          PROGRAWEBS
+          PROGRA<span className="text-customSecondary">WEBS</span>
         </div>
 
         <div className="flex flex-col lg:flex-row gap-8 lg:gap-5 xl:gap-10 px-6 xl:px-0 items-center">
