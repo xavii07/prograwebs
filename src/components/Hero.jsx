@@ -55,17 +55,17 @@ export const Hero = () => {
             transition={{ duration: 0.5, delay: 0.15 }}
           >
             <div className="flex flex-col gap-2 sm:flex-row mt-14 mb-24 sm:mb-40 justify-center">
-              <div
+              <a
+                href=""
                 className="custom-button-colored w-64 sm:w-52 h-12 mr-0 sm:mr-4 lg:mr-6 mb-2 sm:mb-0"
-                onClick={() => setIsModalOpen(true)}
               >
-                Comprar
-              </div>
+                Contacto
+              </a>
               <div
                 className="w-64 sm:w-52 h-12 rounded-xl font-bold text-white border border-solid  flex justify-center items-center cursor-pointer bg-customDarkBg2 hover:bg-customDarkBg3 border-customPrimary transition"
                 onClick={() => setIsModalOpen(true)}
               >
-                Ver Demo
+                Enviar Mensaje
               </div>
             </div>
           </motion.div>

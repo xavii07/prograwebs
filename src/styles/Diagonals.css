@@ -66,12 +66,7 @@
 /* MODAL */
 .nombre {
   padding: auto;
-  margin-bottom: 10px;
+  margin-bottom: 12px;
   border-radius: 10;
   text-align: left;
-}
-
-.letters {
-  color: white;
-  margin-bottom: 8px;
 }

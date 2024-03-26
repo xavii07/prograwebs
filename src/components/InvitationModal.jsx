@@ -2,6 +2,7 @@ import { useEffect, useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { CheckArrowIcon } from "../assets/icons/CheckArrowIcon";
 import { CloseIcon } from "../assets/icons/CloseIcon";
+import { SENDER_MAIL } from "../consts/consts";
 
 export const InvitationModal = ({ setIsOpen }) => {
   const [datauser, setDataUser] = useState({
@@ -23,7 +24,7 @@ export const InvitationModal = ({ setIsOpen }) => {
   const handleSubmit = (e) => {
     e.preventDefault();
     try {
-      fetch("https://formsubmit.co/ajax/segundo.gaspata8420@utc.edu.ec", {
+      fetch(`https://formsubmit.co/ajax/${SENDER_MAIL}`, {
         headers: {
           "Content-Type": "application/json",
           Accept: "application/json",
@@ -114,40 +115,40 @@ export const InvitationModal = ({ setIsOpen }) => {
                 <div className="flex flex-wrap -m-2">
                   <div className="w-full sm:w-4/5 p-2 mx-auto">
                     <form onSubmit={handleSubmit}>
-                      <label className="letters">Nombre</label>
+                      <label className="mb-2 text-white">Nombre</label>
                       <input
-                        className="px-4 py-4 w-full text-gray-500 font-medium text-center placeholder-gray-500 outline-none border bg-gray-300 border-gray-300 rounded-lg focus:ring focus:ring-indigo-300 nombre"
+                        className="px-4 py-3 w-full text-gray-500 font-medium text-center placeholder-gray-500 outline-none border bg-gray-300 border-gray-300 rounded-lg focus:ring focus:ring-indigo-300 nombre"
                         type="text"
                         name="nombre"
                         id="nombre"
                         value={nombre}
                         onChange={handleInputChange}
-                        placeholder="Nombre Completo"
+                        placeholder="Juan Mendez"
                         required
                       />
-                      <label className="letters">Correo</label>
+                      <label className="mb-2 text-white">Correo</label>
                       <input
-                        className="nombre px-4 py-4 w-full text-gray-500 font-medium text-center placeholder-gray-500 outline-none border bg-gray-300 border-gray-300 rounded-lg focus:ring focus:ring-indigo-300"
+                        className="nombre px-4 py-3 w-full text-gray-500 font-medium text-center placeholder-gray-500 outline-none border bg-gray-300 border-gray-300 rounded-lg focus:ring focus:ring-indigo-300"
                         type="email"
                         name="email"
                         id="email"
-                        placeholder="Dirección de Email"
+                        placeholder="juan_mendez@gmail.com"
                         value={email}
                         onChange={handleInputChange}
                         required
                       />
-                      <label className="letters">Asunto</label>
+                      <label className="mb-2 text-white">Asunto</label>
                       <input
-                        className="nombre px-4 py-4 w-full text-gray-500 font-medium text-center placeholder-gray-500 outline-none border bg-gray-300 border-gray-300 rounded-lg focus:ring focus:ring-indigo-300"
+                        className="nombre px-4 py-3 w-full text-gray-500 font-medium text-center placeholder-gray-500 outline-none border bg-gray-300 border-gray-300 rounded-lg focus:ring focus:ring-indigo-300"
                         type="text"
                         name="asunto"
                         id="asunto"
-                        placeholder="Tema..."
+                        placeholder="Solicitud de Informacion o Cotizacion"
                         value={asunto}
                         onChange={handleInputChange}
                         required
                       />
-                      <label className="letters">Mensaje</label>
+                      <label className="mb-2 text-white">Mensaje</label>
                       <textarea
                         style={{ height: "100px" }}
                         className="nombre px-4 py-4 w-full text-gray-500 font-medium text-center placeholder-gray-500 outline-none border bg-gray-300 border-gray-300 rounded-lg focus:ring focus:ring-indigo-300"
@@ -157,15 +158,20 @@ export const InvitationModal = ({ setIsOpen }) => {
                         onChange={handleInputChange}
                         cols="30"
                         rows="10"
-                        placeholder="Tu Mensaje..."
+                        placeholder="Hola, me gustaria saber mas sobre sus servicios..."
                         required
                       ></textarea>
                       <div className="flex justify-center">
                         <button
-                          className="py-4 px-6 flex items-center justify-center text-white font-semibold rounded-xl shadow-4xl focus:ring focus:ring-indigo-300 bg-customPrimary hover:bg-[#7274f3] transition ease-in-out duration-200"
+                          disabled={
+                            nombre === "" ||
+                            email === "" ||
+                            asunto === "" ||
+                            mensaje === ""
+                          }
+                          className="disabled:cursor-not-allowed gap-2 py-4 px-6 flex items-center justify-center text-white font-semibold rounded-xl shadow-4xl focus:ring focus:bg-[#1cb11cd2] bg-customPrimary hover:bg-[#1cb11cd2] transition ease-in-out duration-200"
                           type="submit"
                         >
-                          CONTACTAR
                           <svg
                             data-slot="icon"
                             fill="none"
@@ -182,6 +188,7 @@ export const InvitationModal = ({ setIsOpen }) => {
                               d="M6 12 3.269 3.125A59.769 59.769 0 0 1 21.485 12 59.768 59.768 0 0 1 3.27 20.875L5.999 12Zm0 0h7.5"
                             ></path>
                           </svg>
+                          Enviar Mensaje
                         </button>
                       </div>
                     </form>
