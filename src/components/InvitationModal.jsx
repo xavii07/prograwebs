@@ -3,6 +3,7 @@ import { motion, AnimatePresence } from "framer-motion";
 import { CheckArrowIcon } from "../assets/icons/CheckArrowIcon";
 import { CloseIcon } from "../assets/icons/CloseIcon";
 import { SENDER_MAIL } from "../consts/consts";
+import { Toaster, toast } from "sonner";
 
 export const InvitationModal = ({ setIsOpen }) => {
   const [datauser, setDataUser] = useState({
@@ -11,6 +12,7 @@ export const InvitationModal = ({ setIsOpen }) => {
     asunto: "",
     mensaje: "",
   });
+  const [isloading, setisloading] = useState(false);
 
   const { asunto, email, mensaje, nombre } = datauser;
 
@@ -23,6 +25,7 @@ export const InvitationModal = ({ setIsOpen }) => {
 
   const handleSubmit = (e) => {
     e.preventDefault();
+    setisloading(true);
     try {
       fetch(`https://formsubmit.co/ajax/${SENDER_MAIL}`, {
         headers: {
@@ -34,9 +37,19 @@ export const InvitationModal = ({ setIsOpen }) => {
       })
         .then((res) => (res.ok ? res.json() : Promise.reject(res)))
         .then((json) => {
-          console.log("Mensaje enviado");
+          setDataUser({
+            nombre: "",
+            email: "",
+            asunto: "",
+            mensaje: "",
+          });
+          toast.success(
+            "Mensaje enviado con éxito. Pronto nos pondremos en contacto contigo"
+          );
+          setisloading(false);
         });
     } catch (error) {
+      toast.error("Error al enviar el mensaje. Por favor intente de nuevo");
       console.log(error);
     }
   };
@@ -55,6 +68,7 @@ export const InvitationModal = ({ setIsOpen }) => {
 
   return (
     <AnimatePresence>
+      <Toaster richColors position="top-right" />
       <motion.div
         initial={{ opacity: 0, zIndex: 50 }}
         animate={{ opacity: 1, zIndex: 50 }}
@@ -81,17 +95,19 @@ export const InvitationModal = ({ setIsOpen }) => {
                 <ul className="mb-6 text-white mt-12">
                   <li className="mb-4 flex">
                     <CheckArrowIcon />
-                    <span>Me gustaria adquirir una pagina para mi negocio</span>
-                  </li>
-                  <li className="mb-4 flex">
-                    <CheckArrowIcon />
                     <span>
-                      Le gustaria conversar sobre una solicitud especifica
+                      ¿Le gustaría adquirir una pagina web para su negocio?
                     </span>
                   </li>
                   <li className="mb-4 flex">
                     <CheckArrowIcon />
-                    <span>Le gustaria presentarnos ideas</span>
+                    <span>
+                      ¿Le gustaría conversar sobre una solicitud especifica?
+                    </span>
+                  </li>
+                  <li className="mb-4 flex">
+                    <CheckArrowIcon />
+                    <span>¿Le gustaría presentarnos ideas?</span>
                   </li>
                 </ul>
               </div>
@@ -110,14 +126,14 @@ export const InvitationModal = ({ setIsOpen }) => {
                 </div>
 
                 <h3 className="mb-7 text-2xl text-white font-bold leading-snug text-center">
-                  ¡CONTACTANOS!
+                  ¡CONTÁCTENOS!
                 </h3>
                 <div className="flex flex-wrap -m-2">
                   <div className="w-full sm:w-4/5 p-2 mx-auto">
                     <form onSubmit={handleSubmit}>
                       <label className="mb-2 text-white">Nombre</label>
                       <input
-                        className="px-4 py-3 w-full text-gray-500 font-medium text-center placeholder-gray-500 outline-none border bg-gray-300 border-gray-300 rounded-lg focus:ring focus:ring-indigo-300 nombre"
+                        className="px-4 py-3 w-full text-gray-500 font-medium text-center placeholder-gray-500 outline-none border bg-gray-300 border-gray-300 rounded-lg focus:ring focus:ring-indigo-300 nombre "
                         type="text"
                         name="nombre"
                         id="nombre"
@@ -143,7 +159,7 @@ export const InvitationModal = ({ setIsOpen }) => {
                         type="text"
                         name="asunto"
                         id="asunto"
-                        placeholder="Solicitud de Informacion o Cotizacion"
+                        placeholder="Solicitud de Información o Cotización"
                         value={asunto}
                         onChange={handleInputChange}
                         required
@@ -151,14 +167,14 @@ export const InvitationModal = ({ setIsOpen }) => {
                       <label className="mb-2 text-white">Mensaje</label>
                       <textarea
                         style={{ height: "100px" }}
-                        className="nombre px-4 py-4 w-full text-gray-500 font-medium text-center placeholder-gray-500 outline-none border bg-gray-300 border-gray-300 rounded-lg focus:ring focus:ring-indigo-300"
+                        className="nombre px-4 py-4 w-full text-gray-500 font-medium text-center placeholder-gray-500 outline-none border bg-gray-300 border-gray-300 rounded-lg focus:ring focus:ring-indigo-300 resize-none"
                         name="mensaje"
                         id="mensaje"
                         value={mensaje}
                         onChange={handleInputChange}
                         cols="30"
-                        rows="10"
-                        placeholder="Hola, me gustaria saber mas sobre sus servicios..."
+                        rows="20"
+                        placeholder="Hola, me gustaría información sobre sus servicios..."
                         required
                       ></textarea>
                       <div className="flex justify-center">
@@ -167,15 +183,25 @@ export const InvitationModal = ({ setIsOpen }) => {
                             nombre === "" ||
                             email === "" ||
                             asunto === "" ||
-                            mensaje === ""
+                            mensaje === "" ||
+                            isloading
                           }
-                          className="disabled:cursor-not-allowed gap-2 py-4 px-6 flex items-center justify-center text-white font-semibold rounded-xl shadow-4xl focus:ring focus:bg-[#1cb11cd2] bg-customPrimary hover:bg-[#1cb11cd2] transition ease-in-out duration-200"
+                          className={`gap-2 py-4 px-6 flex items-center justify-center text-white font-semibold rounded-xl shadow-4xl focus:ring focus:bg-[#1cb11cd2] bg-customPrimary hover:bg-[#1cb11cd2] transition ease-in-out duration-200 w-full ${
+                            isloading ? "cursor-not-allowed" : "cursor-pointer"
+                          } ${
+                            nombre === "" ||
+                            email === "" ||
+                            asunto === "" ||
+                            mensaje === ""
+                              ? "opacity-50 cursor-not-allowed"
+                              : "opacity-100 cursor-pointer"
+                          }`}
                           type="submit"
                         >
                           <svg
                             data-slot="icon"
                             fill="none"
-                            stroke-width="1.5"
+                            strokeWidth="1.5"
                             stroke="currentColor"
                             viewBox="0 0 24 24"
                             xmlns="http://www.w3.org/2000/svg"
@@ -183,12 +209,12 @@ export const InvitationModal = ({ setIsOpen }) => {
                             className="h-5 w-5 ml-2"
                           >
                             <path
-                              stroke-linecap="round"
-                              stroke-linejoin="round"
+                              strokeLinecap="round"
+                              strokeLinejoin="round"
                               d="M6 12 3.269 3.125A59.769 59.769 0 0 1 21.485 12 59.768 59.768 0 0 1 3.27 20.875L5.999 12Zm0 0h7.5"
                             ></path>
                           </svg>
-                          Enviar Mensaje
+                          {isloading ? "Enviando Mensaje..." : "Enviar Mensaje"}
                         </button>
                       </div>
                     </form>

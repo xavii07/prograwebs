@@ -9,7 +9,7 @@ export const Hero = () => {
   return (
     <section
       className="w-screen flex justify-center items-center bg-customDarkBg1 mb-[28vw] md:mb-[18vw] lg:mb-[10vw] xl:mb-[13vw] 2xl:mb-60 hero-bg-gradient pb-24 sm:pb-32 md:pb-44 lg:pb-0"
-      id="home"
+      id="inicio"
     >
       <div className="grid grid-cols-1 lg:grid-cols-2 lg:gap-2 place-items-center lg:place-items-stretch">
         <div className="md:w-[800px] flex flex-col justify-center items-center pt-16 md:pt-16 lg:pt-20 text-center">
@@ -28,12 +28,12 @@ export const Hero = () => {
             transition={{ duration: 0.5, delay: 0.05 }}
           >
             <div className="text-5xl sm:text-6xl lg:text-7xl xl:text-7xl font-bold tracking-wide  text-white  px-8 sm:px-8 md:px-20 lg:px-4">
-              <span className="inline md:hidden">
+              <h1 className="inline md:hidden">
                 PROGRA<span className="text-customSecondary">WEBS</span>
-              </span>
-              <span className="hidden md:inline">
+              </h1>
+              <h1 className="hidden md:inline">
                 PROGRA<span className="text-customSecondary">WEBS</span>
-              </span>
+              </h1>
             </div>
             <div className="mt-2 sm:mt-2 text-4xl sm:text-6xl lg:text-7xl xl:text-7xl font-bold tracking-wide  text-white  px-8 sm:px-20 md:px-24 lg:px-24"></div>
           </motion.div>
@@ -44,7 +44,7 @@ export const Hero = () => {
           >
             <div className="text-customGrayText text-sm lg:text-base xl:text-lg sm:text-base mt-2 px-12 sm:px-48 ">
               Impulsamos el éxito en línea de nuestros clientes. Únete a
-              nosotros para crear el futuro en cada clic
+              nosotros para crear el futuro en cada clic.
             </div>
             <br />
             <br />
@@ -58,10 +58,10 @@ export const Hero = () => {
               <a
                 target="_blank"
                 rel="noreferrer"
-                href="https://api.whatsapp.com/send?phone=593995018185&text=Buenas%20tardes%20me%20gustaria%20saber%20mas%20sobre%20sus%20servicios"
+                href="https://api.whatsapp.com/send?phone=593992072597&text=Saludos%20me%20gustaria%20saber%20mas%20sobre%20sus%20servicios%20de%20desarrollo%20web."
                 className="custom-button-colored w-64 sm:w-52 h-12 mr-0 sm:mr-4 lg:mr-6 mb-2 sm:mb-0"
               >
-                Contacto
+                Contacto Directo
               </a>
               <div
                 className="w-64 sm:w-52 h-12 rounded-xl font-bold text-white border border-solid  flex justify-center items-center cursor-pointer bg-customDarkBg2 hover:bg-customDarkBg3 border-customPrimary transition"
@@ -81,7 +81,7 @@ export const Hero = () => {
           <img
             src="src/assets/images/fondo.webp"
             alt="Fondo Prograwebs"
-            className="w-8/12 fondo_prograwebs"
+            className="w-3/5 fondo_prograwebs"
           />
         </motion.div>
         <motion.div
