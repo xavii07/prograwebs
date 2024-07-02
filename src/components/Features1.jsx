@@ -1,5 +1,4 @@
 import { motion } from "framer-motion";
-
 import { CheckArrowIcon } from "../assets/icons/CheckArrowIcon";
 
 export const Features1 = () => {
@@ -18,36 +17,34 @@ export const Features1 = () => {
           <div className="w-full lg:w-1/2 mb-12 lg:mb-0">
             <div className="mx-auto lg:mx-auto w-11/12 sm:w-4/5 md:w-3/4 lg:w-unset">
               <span className="custom-block-subtitle">
-                Paginas Estaticas y Dinamicas
+                Paginas Estáticas y Dinámicas
               </span>
               <h2 className="mt-6 mb-8 text-4xl lg:text-5xl custom-block-big-title">
                 ¡Transforma tu presencia{" "}
                 <span className="text-customSecondary">en la Web!</span>
               </h2>
-              <p className="mb-10 text-customGrayText leading-loose">
-                ¿Cansado de páginas estáticas aburridas?
-              </p>
+
               <p
                 className="mb-10 text-customGrayText leading-loose"
                 style={{ textAlign: "justify" }}
               >
                 Déjanos crear una experiencia web cautivadora y personalizada
-                para tu negocio. Descubre cómo nuestras páginas web dinámicas y
-                atractivas pueden impulsar tu presencia en línea y cautivar a
-                tus visitantes desde el primer clic.
+                para tu negocio. Descubre cómo nuestras páginas web atractivas
+                pueden impulsar tu presencia en línea y cautivar a tus
+                visitantes desde el primer clic.
               </p>
               <ul className="mb-6 text-white">
                 <li className="mb-4 flex">
                   <CheckArrowIcon />
-                  <span>Diseño Minimalista y Atractivo</span>
+                  <span>Diseño minimalista y atractivo</span>
                 </li>
                 <li className="mb-4 flex">
                   <CheckArrowIcon />
-                  <span>Experiencia de Usuario Intuitiva</span>
+                  <span>Experiencia de usuario intuitiva</span>
                 </li>
                 <li className="mb-4 flex">
                   <CheckArrowIcon />
-                  <span>Compatibilidad Móvil y Responsividad</span>
+                  <span>Adaptable a cualquier tamaño de pantalla</span>
                 </li>
               </ul>
             </div>
@@ -58,14 +55,14 @@ export const Features1 = () => {
                 <img
                   src="src/assets/images/astra.webp"
                   alt="Proyecto Astra"
-                  className="rounded-xl  custom-border-gray mx-auto sm:mx-unset"
+                  className="rounded-xl custom-border-gray mx-auto sm:mx-unset opacity-50 scale-95 hover:opacity-100 hover:scale-100 hover:transition-all"
                 />
               </div>
-              <div className="py-3 pl-3 pr-2 rounded">
+              <div className="py-3 pl-3 pr-2 rounded-lg ">
                 <img
-                  src="src/assets/images/hestia.webp"
-                  alt="Proyecto Hestia"
-                  className="rounded-xl  custom-border-gray mx-auto sm:mx-unset"
+                  src="src/assets/images/image-20.webp"
+                  alt="Proyecto Experiencia"
+                  className="rounded-xl custom-border-gray opacity-50 scale-95 hover:opacity-100 hover:scale-100 hover:transition-all"
                 />
               </div>
             </div>
@@ -74,14 +71,14 @@ export const Features1 = () => {
                 <img
                   src="src/assets/images/image-33.webp"
                   alt="Proyecto Sala"
-                  className="rounded-xl  custom-border-gray"
+                  className="rounded-xl custom-border-gray opacity-50 scale-95 hover:opacity-100 hover:scale-100 hover:transition-all"
                 />
               </div>
-              <div className="py-3 pl-3 pr-2 rounded-lg ">
+              <div className="py-3 pl-3 pr-2 rounded">
                 <img
-                  src="src/assets/images/image-20.webp"
-                  alt="Proyecto Experiencia"
-                  className="rounded-xl  custom-border-gray"
+                  src="src/assets/images/hestia.webp"
+                  alt="Proyecto Hestia"
+                  className="rounded-xl custom-border-gray mx-auto sm:mx-unset opacity-50 scale-95 hover:opacity-100 hover:scale-100 hover:transition-all"
                 />
               </div>
             </div>
