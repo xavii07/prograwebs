@@ -1,24 +1,6 @@
 import { motion } from "framer-motion";
-
 import { QuoteIcon } from "../assets/icons/QuoteIcon";
-
-const testimonialsData = [
-  {
-    customerTitle: "Acerca de Nosotros",
-    content:
-      " En Prograwebs buscamos transformar ideas en realidad digital. Fusionamos funcionalidad y estética para crear experiencias impactantes. Impulsamos el éxito en línea de nuestros clientes. Únete a nosotros para crear el futuro en cada clic.",
-  },
-  {
-    customerTitle: "Mision",
-    content:
-      "En Prograwebs, nuestra misión es transformar ideas en experiencias digitales innovadoras, brindando soluciones en el desarrollo de páginas, aplicaciones y sitios web que impulsen el crecimiento y la presencia en línea de nuestros clientes.",
-  },
-  {
-    customerTitle: "Vision",
-    content:
-      "Ser reconocidos como líderes en el desarrollo web, destacándonos por nuestra creatividad, eficiencia y compromiso con la excelencia, contribuyendo al éxito continuo de nuestros clientes en un mundo digital en constante evolución.",
-  },
-];
+import { aboutData } from "../consts/consts";
 
 export const Testimonials = () => (
   <section className="w-full flex justify-center pt-10 mb-16 lg:mb-32 bg-customDarkBg2 relative">
@@ -38,14 +20,14 @@ export const Testimonials = () => (
         </div>
 
         <div className="flex flex-col lg:flex-row gap-8 lg:gap-5 xl:gap-10 px-6 xl:px-0 items-center">
-          {testimonialsData.map((testimonial, index) => (
+          {aboutData.map((testimonial, index) => (
             <div
-              className="w-11/12 sm:w-4/5 md:w-[560px] lg:w-1/3 custom-border-gray-darker rounded-xl bg-customDarkBg3 flex flex-col px-6 py-4"
+              className="w-11/12 sm:w-4/5 md:w-[560px] lg:w-1/3 custom-border-gray-darker rounded-xl bg-customDarkBg3 flex flex-col px-6 py-4 opacity-50 scale-95 hover:opacity-100 hover:scale-100 hover:transition-all"
               key={`${testimonial.customerName}-${index}`}
             >
-              <div className="custom-content-text-gray">
-                {testimonial.customerTitle}
-              </div>
+              <p className="custom-content-text-gray text-2xl font-bold">
+                {testimonial.title}
+              </p>
               <div className="flex mb-2">
                 <QuoteIcon />
               </div>
