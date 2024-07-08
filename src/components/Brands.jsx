@@ -1,14 +1,23 @@
 import { motion } from "framer-motion";
-
-import { AmazonLogo } from "../assets/logos/AmazonLogo";
-import { DropboxLogo } from "../assets/logos/DropboxLogo";
 import { NetflixLogo } from "../assets/logos/NetflixLogo";
 import { SlackLogo } from "../assets/logos/SlackLogo";
 import { SpotifyLogo } from "../assets/logos/SpotifyLogo";
 import { StripeLogo } from "../assets/logos/StripeLogo";
+import JavaScript from "../assets/logos/Javascript";
+import Python from "../assets/logos/Python";
+import MongoDb from "../assets/logos/Mongodb";
+import MysqlDb from "../assets/logos/Mysql";
+import NodeJs from "../assets/logos/Nodejs";
+import React from "../assets/logos/React";
+import Dotnet from "../assets/logos/Dotnet";
+import PostgreSql from "../assets/logos/Postgresql";
+import Wordpress from "../assets/logos/Wordpress";
+import Css3 from "../assets/logos/Css3";
+import Html5 from "../assets/logos/Html5";
+import Nest from "../assets/logos/Nestjs";
 
 export const Brands = () => (
-  <section className="py-12 sm:py-24 bg-customDarkBg1 w-full mt-16 mb-16">
+  <section className="py-12 sm:py-24 bg-customDarkBg1 w-full mt-16 mb-1">
     <motion.div
       initial={{ opacity: 0 }}
       whileInView={{ opacity: 1 }}
@@ -20,33 +29,51 @@ export const Brands = () => (
           <div className="w-full lg:w-1/2 px-4 mb-12 lg:mb-0">
             <div className="flex flex-col">
               <h2 className="mb-2  text-4xl sm:text-5xl 2xl:text-6xl font-bold tracking-normal text-white">
-                Herramientas
+                Tecnologías
               </h2>
               <h2 className=" text-4xl  sm:text-5xl 2xl:text-6xl font-bold tracking-normal text-customSecondary">
-                que usamos
+                que utilizamos
               </h2>
             </div>
           </div>
-          <div className="w-2/3 sm:w-[620px] lg:w-1/2 mx-auto lg:mx-0 lg:pl-10">
-            <div className="flex flex-wrap -m-4">
-              <div className="w-1/2 sm:w-1/3 py-6 flex justify-center">
-                <AmazonLogo />
+          <div className="w-2/3 sm:w-[720px] mx-auto lg:mx-0 lg:pl-10">
+            <div className="flex flex-wrap">
+              <div className="w-1/2 sm:w-1/4 py-6 flex justify-center">
+                <JavaScript />
               </div>
-              <div className="w-1/2 sm:w-1/3 py-6 flex  justify-center">
-                <DropboxLogo />
+              <div className="w-1/2 sm:w-1/4 py-6 flex  justify-center">
+                <Python />
               </div>
-              <div className="w-1/2 sm:w-1/3 py-6 flex  justify-center">
-                <NetflixLogo />
+              <div className="w-1/2 sm:w-1/4 py-6 flex  justify-center">
+                <MongoDb />
               </div>
-              <div className="w-1/2 sm:w-1/3 py-6 flex justify-center">
-                <StripeLogo />
+              <div className="w-1/2 sm:w-1/4 py-6 flex justify-center">
+                <MysqlDb />
               </div>
 
-              <div className="w-1/2 sm:w-1/3 py-6 flex justify-center">
-                <SpotifyLogo />
+              <div className="w-1/2 sm:w-1/4 py-6 flex justify-center">
+                <NodeJs />
               </div>
-              <div className="w-1/2 sm:w-1/3  py-6 flex  justify-center">
-                <SlackLogo />
+              <div className="w-1/2 sm:w-1/4  py-6 flex  justify-center">
+                <React />
+              </div>
+              <div className="w-1/2 sm:w-1/4  py-6 flex  justify-center">
+                <Dotnet />
+              </div>
+              <div className="w-1/2 sm:w-1/4 py-6 flex justify-center">
+                <PostgreSql />
+              </div>
+              <div className="w-1/2 sm:w-1/4 py-6 flex justify-center">
+                <Wordpress />
+              </div>
+              <div className="w-1/2 sm:w-1/4 py-6 flex justify-center">
+                <Css3 />
+              </div>
+              <div className="w-1/2 sm:w-1/4 py-6 flex justify-center">
+                <Html5 />
+              </div>
+              <div className="w-1/2 sm:w-1/4 py-6 flex justify-center">
+                <Nest />
               </div>
             </div>
           </div>
