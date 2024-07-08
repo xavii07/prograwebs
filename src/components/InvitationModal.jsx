@@ -13,7 +13,6 @@ export const InvitationModal = ({ setIsOpen }) => {
     mensaje: "",
   });
   const [isloading, setisloading] = useState(false);
-
   const { asunto, email, mensaje, nombre } = datauser;
 
   const handleInputChange = (e) => {

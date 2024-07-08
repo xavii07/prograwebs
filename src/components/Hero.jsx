@@ -1,7 +1,8 @@
 import { useState } from "react";
 import { motion } from "framer-motion";
-
 import { InvitationModal } from "./InvitationModal";
+import ButtonCom from "./Hero/Button";
+import ButtonEnlace from "./Hero/ButtonEnlace";
 
 export const Hero = () => {
   const [isModalOpen, setIsModalOpen] = useState(false);
@@ -55,20 +56,15 @@ export const Hero = () => {
             transition={{ duration: 0.5, delay: 0.15 }}
           >
             <div className="flex flex-col gap-2 sm:flex-row mt-14 mb-24 sm:mb-40 justify-center">
-              <a
-                target="_blank"
-                rel="noreferrer"
+              <ButtonEnlace
                 href="https://api.whatsapp.com/send?phone=593992072597&text=Saludos%20me%20gustaria%20saber%20mas%20sobre%20sus%20servicios%20de%20desarrollo%20web."
-                className="custom-button-colored w-64 sm:w-52 h-12 mr-0 sm:mr-4 lg:mr-6 mb-2 sm:mb-0"
-              >
-                Contacto Directo
-              </a>
-              <div
-                className="w-64 sm:w-52 h-12 rounded-xl font-bold text-white border border-solid  flex justify-center items-center cursor-pointer bg-customDarkBg2 hover:bg-customDarkBg3 border-customPrimary transition"
-                onClick={() => setIsModalOpen(true)}
-              >
-                Enviar Mensaje
-              </div>
+                text="Contactar por WhatsApp"
+              />
+
+              <ButtonCom
+                text="Enviar Mensaje"
+                setIsModalOpen={() => setIsModalOpen(true)}
+              />
             </div>
           </motion.div>
         </div>

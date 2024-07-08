@@ -2,6 +2,7 @@ import { motion } from "framer-motion";
 import { useState } from "react";
 
 import { InvitationModal } from "./InvitationModal";
+import ButtonCom from "./Hero/Button";
 
 export const FeaturesDiagonal = () => {
   const [isModalOpen, setIsModalOpen] = useState(false);
@@ -41,14 +42,13 @@ export const FeaturesDiagonal = () => {
               En la era digital actual, tener una presencia en línea sólida es
               fundamental para el éxito de cualquier empresa. Nuestras páginas
               web no solo ofrecen una presencia digital, sino que también son
-              una poderosa herramienta para potenciar tu éxito en el mundo
-              digital.
+              una poderosa herramienta para potenciar tu éxito.
             </p>
-            <div
-              className="w-[210px] h-12 custom-button-colored mr-10 "
-              onClick={() => setIsModalOpen(true)}
-            >
-              Empezar Ahora
+            <div className="sm:w-1/2">
+              <ButtonCom
+                text="Empezar ahora"
+                setIsModalOpen={() => setIsModalOpen(true)}
+              />
             </div>
           </div>
           <div className="w-4/5 lg:w-1/2 lg:pl-16 flex justify-center mx-auto pt-16 lg:pt-0">

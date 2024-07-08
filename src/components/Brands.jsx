@@ -1,8 +1,4 @@
 import { motion } from "framer-motion";
-import { NetflixLogo } from "../assets/logos/NetflixLogo";
-import { SlackLogo } from "../assets/logos/SlackLogo";
-import { SpotifyLogo } from "../assets/logos/SpotifyLogo";
-import { StripeLogo } from "../assets/logos/StripeLogo";
 import JavaScript from "../assets/logos/Javascript";
 import Python from "../assets/logos/Python";
 import MongoDb from "../assets/logos/Mongodb";
