@@ -36,13 +36,11 @@ export const FeaturesDiagonal = () => {
             </span>
             <h2 className="mt-10 mb-8 text-4xl lg:text-5xl custom-block-big-title">
               Desbloquea tu potencial en línea con{" "}
-              <span className="text-customSecondary">nuestras páginas Web</span>
+              <span className="text-customSecondary">nuestros servicios</span>
             </h2>
             <p className="mb-16 text-customGrayText leading-loose text-justify">
               En la era digital actual, tener una presencia en línea sólida es
-              fundamental para el éxito de cualquier empresa. Nuestras páginas
-              web no solo ofrecen una presencia digital, sino que también son
-              una poderosa herramienta para potenciar tu éxito.
+              fundamental para el éxito de cualquier empresa.
             </p>
             <div className="sm:w-1/2">
               <ButtonCom
@@ -52,11 +50,7 @@ export const FeaturesDiagonal = () => {
             </div>
           </div>
           <div className="w-4/5 lg:w-1/2 lg:pl-16 flex justify-center mx-auto pt-16 lg:pt-0">
-            <img
-              src="src/assets/images/featuresdiagonal.jpg"
-              alt="Linea de tiempo"
-              className="rounded-xl  custom-border-gray"
-            />
+            <img src="src/assets/images/time.png" alt="Linea de tiempo" />
           </div>
         </div>
       </motion.div>
