@@ -77,7 +77,7 @@ export const Hero = () => {
           <img
             src="src/assets/images/fondo.webp"
             alt="Fondo Prograwebs"
-            className="w-3/5 fondo_prograwebs"
+            className="w-3/6 fondo_prograwebs"
           />
         </motion.div>
         <motion.div

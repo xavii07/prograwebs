@@ -1,6 +1,4 @@
-import { FacebookIcon } from "../assets/icons/FacebookIcon";
-import { InstagramIcon } from "../assets/icons/InstagramIcon";
-import { TwitterIcon } from "../assets/icons/TwitterIcon";
+import RedesContainer from "./Redes/RedesContainer";
 
 const footerData = [
   {
@@ -46,34 +44,9 @@ export const Footer = () => {
               <p className="mb-10 mt-4 sm:w-[22rem] lg:w-[20rem] xl:w-[24rem] text-gray-400 leading-loose text-center lg:text-left mx-auto lg:mx-0">
                 Somos una empresa que busca ser líder en el desarrollo de
                 software, dedicada a transformar ideas en soluciones digitales
-                innovadoras
-                <a
-                  href="https://bootstrapious.com/p/bootstrap-4-dark-admin"
-                  target="_blank"
-                  className="text-gray-100 ml-1.5 "
-                  aria-label="DarkAdmin"
-                ></a>
+                innovadoras.
               </p>
-              <div className="w-36 mx-auto lg:mx-0">
-                <a
-                  className="inline-block w-10  h-10 mr-2 p-2 bg-customDarkBg2 custom-border-gray  hover:bg-gray-700 rounded-xl"
-                  href="#"
-                >
-                  <FacebookIcon />
-                </a>
-                <a
-                  className="inline-block w-10  h-10 mr-2 p-2 bg-customDarkBg2 custom-border-gray  hover:bg-gray-700 rounded-xl"
-                  href="#"
-                >
-                  <TwitterIcon />
-                </a>
-                <a
-                  className="inline-block w-10  h-10 mr-2 p-2 bg-customDarkBg2 custom-border-gray  hover:bg-gray-700 rounded-xl"
-                  href="#"
-                >
-                  <InstagramIcon />
-                </a>
-              </div>
+              <RedesContainer />
             </div>
             <div className="w-full lg:w-2/3  lg:pl-16 hidden lg:flex flex-wrap justify-between">
               <div className="w-full md:w-1/3 lg:w-auto mb-16 md:mb-0">
