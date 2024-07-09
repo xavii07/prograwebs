@@ -2,23 +2,16 @@ import RedesContainer from "./Redes/RedesContainer";
 
 const footerData = [
   {
-    title: "Products",
-    items: ["Servicios", "Productos", "Noticias"],
+    title: "Productos",
+    items: ["Servicios"],
   },
   {
-    title: "Important Links",
-    items: [
-      "",
-      "",
-      "Planes",
-      "Ubicacion",
-      "Terminos & Condiciones",
-      "Politica de Privacidad",
-    ],
+    title: "Empresa",
+    items: ["Preguntas Frecuentes", "Tecnologias"],
   },
   {
-    title: "Company",
-    items: ["Nosotros", "Trabajos", "", "Contacto"],
+    title: "Informacion",
+    items: ["Acerca de Nosotros", "Contacto"],
   },
 ];
 

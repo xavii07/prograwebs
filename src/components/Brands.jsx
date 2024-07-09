@@ -19,6 +19,7 @@ export const Brands = () => (
       whileInView={{ opacity: 1 }}
       viewport={{ once: true }}
       transition={{ duration: 0.5, delay: 0.2 }}
+      id="tecnologias"
     >
       <div className="container px-4 mx-auto 2xl:w-[1200px] xl:w-[1100px] lg:w-[1000px] md:w-4/5">
         <div className="flex lg:flex-row flex-col items-center -mx-4 justify-center lg:text-left text-center">

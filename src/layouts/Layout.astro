@@ -14,15 +14,19 @@ const { title } = Astro.props;
 ---
 
 <!doctype html>
-<html lang="en">
+<html lang="es">
   <head>
     <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="icon" href="/codigo.png" />
     <meta name="generator" content={Astro.generator} />
     <meta
       name="description"
-      content="Dark themed website template built on AstroJS, designed for technological startup business."
+      content="PrograWebs desarrolla aplicaciones web y móviles con tecnologías modernas y de alta calidad."
+    />
+    <meta
+      name="keywords"
+      content="PrograWebs, desarrollo web, desarrollo móvil, tecnologías modernas, alta calidad"
     />
     <meta name="author" content="PrograWebs" />
     <title>{title}</title>
@@ -35,6 +39,10 @@ const { title } = Astro.props;
         background-color: #26272b;
         overflow-x: hidden;
         scroll-behavior: smooth;
+      }
+
+      [id] {
+        scroll-margin-top: 4.5rem;
       }
     </style>
   </body>

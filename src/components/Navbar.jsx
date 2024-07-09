@@ -3,10 +3,15 @@ import { motion, AnimatePresence } from "framer-motion";
 
 const navbarLinks = [
   { label: "Inicio", href: "#inicio", ariaLabel: "Inicio" },
-  { label: "Productos", href: "#features", ariaLabel: "Features" },
-  { label: "Precios", href: "#pricing", ariaLabel: "Pricing" },
-  { label: "Acerca de", href: "#feedback", ariaLabel: "Feedback" },
-  { label: "FAQ", href: "#FAQ", ariaLabel: "FAQ" },
+  { label: "Productos", href: "#productos", ariaLabel: "Productos" },
+  { label: "Acerca de", href: "#acerca", ariaLabel: "Acerca" },
+  { label: "Contacto", href: "#contacto", ariaLabel: "Contacto" },
+  {
+    label: "Preguntas Frecuentes",
+    href: "#preguntas-frecuentes",
+    ariaLabel: "Preguntas Frecuentes",
+  },
+  { label: "Tecnologias", href: "#tecnologias", ariaLabel: "Tecnologias" },
 ];
 
 export const Navbar = () => {
@@ -21,7 +26,7 @@ export const Navbar = () => {
           transition={{ duration: 0.3 }}
           exit={{ opacity: 0 }}
         >
-          <a className="navbar-link" href="#inicio" aria-label="Inicio">
+          <a className="navbar-link" href="/" aria-label="Inicio">
             <div className="flex justify-start items-center grow basis-0">
               <div className="text-white mr-2 text-6xl">
                 <img

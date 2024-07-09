@@ -4,7 +4,7 @@ import { FAQData } from "../consts/consts";
 
 export const FAQ = () => (
   <section className="relative pt-16 pb-16 bg-blueGray-50 overflow-hidden">
-    <div className="absolute -top-10" id="FAQ" />
+    <div className="absolute -top-10" id="preguntas-frecuentes" />
     <motion.div
       initial={{ opacity: 0 }}
       whileInView={{ opacity: 1 }}
