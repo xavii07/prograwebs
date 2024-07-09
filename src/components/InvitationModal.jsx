@@ -4,6 +4,7 @@ import { CheckArrowIcon } from "../assets/icons/CheckArrowIcon";
 import { CloseIcon } from "../assets/icons/CloseIcon";
 import { SENDER_MAIL } from "../consts/consts";
 import { Toaster, toast } from "sonner";
+import ButtonCom from "./Hero/Button";
 
 export const InvitationModal = ({ setIsOpen }) => {
   const [datauser, setDataUser] = useState({
@@ -176,45 +177,8 @@ export const InvitationModal = ({ setIsOpen }) => {
                         placeholder="Hola, me gustaría información sobre sus servicios..."
                         required
                       ></textarea>
-                      <div className="flex justify-center">
-                        <button
-                          disabled={
-                            nombre === "" ||
-                            email === "" ||
-                            asunto === "" ||
-                            mensaje === "" ||
-                            isloading
-                          }
-                          className={`gap-2 py-4 px-6 flex items-center justify-center text-white font-semibold rounded-xl shadow-4xl focus:ring focus:bg-[#1cb11cd2] bg-customPrimary hover:bg-[#1cb11cd2] transition ease-in-out duration-200 w-full ${
-                            isloading ? "cursor-not-allowed" : "cursor-pointer"
-                          } ${
-                            nombre === "" ||
-                            email === "" ||
-                            asunto === "" ||
-                            mensaje === ""
-                              ? "opacity-50 cursor-not-allowed"
-                              : "opacity-100 cursor-pointer"
-                          }`}
-                          type="submit"
-                        >
-                          <svg
-                            data-slot="icon"
-                            fill="none"
-                            strokeWidth="1.5"
-                            stroke="currentColor"
-                            viewBox="0 0 24 24"
-                            xmlns="http://www.w3.org/2000/svg"
-                            aria-hidden="true"
-                            className="h-5 w-5 ml-2"
-                          >
-                            <path
-                              strokeLinecap="round"
-                              strokeLinejoin="round"
-                              d="M6 12 3.269 3.125A59.769 59.769 0 0 1 21.485 12 59.768 59.768 0 0 1 3.27 20.875L5.999 12Zm0 0h7.5"
-                            ></path>
-                          </svg>
-                          {isloading ? "Enviando Mensaje..." : "Enviar Mensaje"}
-                        </button>
+                      <div className="w-full">
+                        <ButtonCom text="Enviar Mensaje" type="submit" />
                       </div>
                     </form>
                   </div>
