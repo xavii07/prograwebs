@@ -58,7 +58,7 @@ export const Hero = () => {
             <div className="flex flex-col gap-2 sm:flex-row mt-14 mb-24 sm:mb-40 justify-center w-full">
               <ButtonEnlace
                 href="https://api.whatsapp.com/send?phone=593992072597&text=Saludos%20me%20gustaria%20saber%20mas%20sobre%20sus%20servicios%20de%20desarrollo%20web."
-                text="Contactar por WhatsApp"
+                text="Contacto WhatsApp"
               />
 
               <ButtonCom
