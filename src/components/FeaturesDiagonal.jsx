@@ -50,7 +50,7 @@ export const FeaturesDiagonal = () => {
             </div>
           </div>
           <div className="w-4/5 lg:w-1/2 lg:pl-16 flex justify-center mx-auto pt-16 lg:pt-0">
-            <img src="src/assets/images/time.png" alt="Linea de tiempo" />
+            <img src="src/assets/images/time2.png" alt="Linea de tiempo" />
           </div>
         </div>
       </motion.div>
